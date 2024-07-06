@@ -21,9 +21,16 @@ body, html {
     padding: 0;
     font-family: "Gill Sans", sans-serif;
     height: 100%;
-    background: var(--rich-black); /* Ensure a dark background */
+    background: linear-gradient(270deg, var(--secondary-color), var(--primary-color));
     background-size: 1000% 1000%;
+    animation: gradient-animation 15s ease infinite;
     scroll-behavior: smooth;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 100%; }
+    50% { background-position: 50% 50%; }
+    100% { background-position: 0% 100%; }
 }
 
 .container {
@@ -33,7 +40,6 @@ body, html {
     align-items: center;
     text-align: center;
     color: var(--antiflash-white);
-
 }
 
 .navbar {
@@ -135,12 +141,6 @@ body, html {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradient-animation 20s ease infinite;
-}
-
-@keyframes gradient-animation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 @keyframes fadeIn {
