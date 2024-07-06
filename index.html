@@ -2,20 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="content">
-            <h1>Coming Soon!!!</h1>
-            <p>We are working hard to bring you a great experience. Stay tuned!</p>
-            <form>
+        <nav class="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">
+                &#9776; <!-- Unicode character for the hamburger menu -->
+            </div>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="content" id="home">
+            <h1 class="fade-in">Coming Soon</h1>
+            <p class="fade-in-delay">We are working hard to bring you a great experience. Stay tuned!</p>
+            <form id="notify-form">
                 <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Notify Me (nothing happens)</button>
+                <button type="submit">Notify Me</button>
             </form>
         </div>
+        <div class="content" id="about">
+            <h1 class="fade-in">About Us</h1>
+            <p class="fade-in-delay">coming soon...</p>
+        </div>
+        <div class="content" id="projects">
+    <h1 class="fade-in">Projects</h1>
+    <div class="project-card fade-in-delay">
+        <img src="images/f1_elo_header.webp" alt="Project Image">
+        <h2>F1 Elo Tracker</h2>
+        <p>
+            Evaluate F1 Drivers against each other using real race results and the
+            <a href="https://en.wikipedia.org/wiki/Elo_rating_system" target="_blank">ELO rating system</a>.
+            A real-life iRating!
+        </p>
+        <a href="http://f1app.dougsack.com/" target="_blank">View Project</a>
     </div>
+</div>
+        <div class="content" id="contact">
+            <h1 class="fade-in">Contact Us</h1>
+            <p class="fade-in-delay">How to get in touch...</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Coming Soon. All Rights Reserved. | <a href="https://example.com/privacy-policy" target="_blank">Privacy Policy</a></p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

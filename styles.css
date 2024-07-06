@@ -1,54 +1,247 @@
+/* CSS HEX */
+:root {
+    --prussian-blue: #0f384f;
+    --rich-black: #04151f;
+    --princeton-orange: #ff8f0f;
+    --antiflash-white: #EBEBEB;
+}
+
 body, html {
     margin: 0;
     padding: 0;
-    width: 100%;
+    font-family: "Gill Sans", sans-serif;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    background: linear-gradient(-45deg, var(--prussian-blue), var(--rich-black), var(--princeton-orange));
+    background-size: 1000% 1000%;
+    animation: gradient 15s ease infinite;
+    scroll-behavior: smooth;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     text-align: center;
-    color: #fff;
+    color: var(--antiflash-white);
+}
+
+.navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem 0;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure the navbar is above other elements */
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--antiflash-white);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--antiflash-white);
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+    color: var(--princeton-orange);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul li a.active {
+    background-color: var(--princeton-orange);
+    color: var(--rich-black);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 3s ease;
+    min-height: 100vh; /* Ensure each content section takes full height of the viewport */
+    padding: 2rem 1rem;
+    opacity: 0; /* Start hidden */
+    transition: opacity 2s ease-in-out; /* Smooth fade-in */
+}
+
+.content.appear {
+    opacity: 1; /* Visible when in view */
 }
 
 h1 {
-    font-size: 4em;
-    margin-bottom: 0.5em;
+    font-size: 4rem;
+    margin-bottom: 1rem;
 }
 
 p {
-    font-size: 1.5em;
-    margin-bottom: 1em;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 form {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 input[type="email"] {
-    padding: 0.5em;
-    font-size: 1em;
+    padding: 0.5rem;
     border: none;
     border-radius: 5px;
-    margin-right: 0.5em;
+    margin-bottom: 1rem;
+    width: 250px;
+    max-width: 80%;
 }
 
-button {
-    padding: 0.5em 1em;
-    font-size: 1em;
+button[type="submit"] {
+    padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
-    background-color: #3498db;
-    color: #fff;
+    background-color: var(--princeton-orange);
+    color: var (--rich-black);
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #2980b9;
+button[type="submit"]:hover {
+    background-color: var(--prussian-blue);
+    color: var(--princeton-orange);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.fade-in-delay {
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* Project Card Styling */
+.project-card {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--antiflash-white);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    width: 300px;
+    max-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.project-card h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.project-card p {
+    font-size: 1rem;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: var(--princeton-orange);
+    font-weight: bold;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: var(--antiflash-white);
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 0.8rem; /* Smaller font size for footer text */
+}
+
+footer p a {
+    font-size: 0.8rem; /* Ensure links in the footer are also smaller */
+}
+
+footer a {
+    color: var(--princeton-orange);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .navbar ul li {
+        margin: 0.5rem 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+.show {
+    display: flex !important;
+    flex-direction: column;
 }
