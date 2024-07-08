@@ -1,289 +1,127 @@
 :root {
-    --primary-color: #0f384f;
-    --secondary-color: #ff8f0f;
-    --highlight-color: #EBEBEB;
-    --hover-color: #FFD600;
-    --text-color: #EBEBEB;
-    --text-hover-color: #ff8f0f;
-    --light-color: #EBEBEB;
-    --item-bg-color: transparent; /* Set to transparent */
-    --item-border-color: transparent; /* Set to transparent */
-    --nav-hover-bg-color: #d3d3d3; /* Gray color for highlight */
-
     --prussian-blue: #0f384f;
     --rich-black: #04151f;
     --princeton-orange: #ff8f0f;
     --antiflash-white: #EBEBEB;
 }
 
-body, html {
+body {
+    font-family: 'Gill Sans', sans-serif;
     margin: 0;
     padding: 0;
-    font-family: "Gill Sans", sans-serif;
-    height: 100%;
-    background: linear-gradient(270deg, var(--secondary-color), var(--primary-color));
-    background-size: 1000% 1000%;
-    animation: gradient-animation 15s ease infinite;
-    scroll-behavior: smooth;
-}
-
-@keyframes gradient-animation {
-    0% { background-position: 0% 100%; }
-    50% { background-position: 50% 50%; }
-    100% { background-position: 0% 100%; }
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    min-height: 100vh;
+    background: url('images/fabric.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: var(--antiflash-white);
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 10px;
     text-align: center;
-    color: var(--antiflash-white);
 }
 
-.navbar {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 1rem 0;
-    position: -webkit-sticky; /* For Safari */
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Ensure the navbar is above other elements */
-}
-
-.menu-icon {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: var(--antiflash-white);
-}
-
-.navbar ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.navbar ul li {
-    margin: 0 1rem;
-}
-
-.navbar ul li a {
-    text-decoration: none;
-    color: var(--antiflash-white);
-    font-weight: bold;
-    transition: color 0.3s, background-color 0.3s;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-}
-
-.navbar ul li a:hover {
-    color: var(--princeton-orange);
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.navbar ul li a.active {
-    background-color: var(--princeton-orange);
-    color: var(--rich-black);
-}
-
-@media (max-width: 768px) {
-    .navbar ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.7);
-    }
-
-    .navbar ul li {
-        margin: 0.5rem 0;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-}
-
-.show {
-    display: flex !important;
-    flex-direction: column;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: fadeIn 3s ease;
-    width: 90vw; /* Ensure each content section takes almost full width of the viewport */
-    padding: 2rem 1rem;
-    opacity: 0; /* Start hidden */
-    transition: opacity 2s ease-in-out; /* Smooth fade-in */
-    background-color: transparent; /* Make background transparent */
-    color: var(--highlight-color);
-    margin: 30px 0; /* Remove horizontal margin */
-    border-radius: 10px;
-    box-shadow: none; /* Remove box-shadow */
-}
-
-.content.appear {
-    opacity: 1; /* Visible when in view */
-}
-
-.gradient-text {
-    background: linear-gradient(270deg, var(--secondary-color), var(--highlight-color), var(--secondary-color));
-    background-size: 800% 800%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradient-animation 20s ease infinite;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
+section {
+    margin: 20px 0;
+    padding: 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
 }
 
 h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-p {
-    font-size: 1rem;
-    margin-bottom: 1.1rem;
+    margin: 15px;
+    font-size: 2em;
 }
 
 form {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 input[type="email"] {
-    padding: 0.5rem;
+    padding: 10px;
     border: none;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    width: 250px;
-    max-width: 80%;
+    border-radius: 20px;
+    margin-right: 10px;
+    outline: none;
+    flex: 1;
+    max-width: 300px;
+    margin-bottom: 10px;
 }
 
-button[type="submit"] {
-    padding: 0.5rem 1rem;
+button {
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     background-color: var(--princeton-orange);
     color: var(--rich-black);
-    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-button[type="submit"]:hover {
-    background-color: var(--prussian-blue);
-    color: var(--princeton-orange);
+button:hover {
+    background-color: #af630c;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    flex-wrap: nowrap;
 }
 
 .project-card {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: var(--antiflash-white);
-    border-radius: 10px;
-    padding: 1rem;
-    margin: 1rem;
-    width: 300px;
-    max-width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    min-width: 300px;
+    margin: 0 10px;
+    padding: 10px;
+    scroll-snap-align: center;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+    text-align: left;
 }
 
 .project-card img {
     width: 100%;
-    border-radius: 10px 10px 0 0;
+    border-radius: 15px;
+    margin-bottom: 10px;
 }
 
 .project-card h2 {
-    font-size: 1.1rem;
-    margin: 0.5rem 0;
+    margin: 0 0 10px;
+    font-size: 1.3em;
 }
 
 .project-card p {
-    font-size: 0.8rem;
-    margin: 0.5rem 0 1rem 0;
+    margin: 0;
+    font-size: 0.9em;
 }
 
-.project-card a {
-    text-decoration: none;
-    color: var(--princeton-orange);
-    font-weight: bold;
-}
-
-.project-card a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: var(--antiflash-white);
-    text-align: center;
-    padding: 0.5rem 0;
-    position: sticky;
-    bottom: 0;
-}
-
-footer p {
-    font-size: 0.9rem; /* Smaller font size for footer text */
-}
-
-footer p a {
-    font-size: 0.9rem; /* Ensure links in the footer are also smaller */
-}
-
-footer a {
-    color: var(--princeton-orange);
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-.projects-container {
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping to the next line if needed */
-    justify-content: center; /* Center the items horizontally */
-}
-
-.project-card {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: var(--antiflash-white);
-    border-radius: 10px;
-    padding: 1rem;
-    margin: 1rem;
-    width: calc(25% - 2rem); /* Adjust width to fit three items in a row with margins */
-    max-width: 80%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-@media (max-width: 768px) {
-    .project-card {
-        width: calc(50% - 2rem); /* Two items per row on smaller screens */
+@media (max-width: 600px) {
+    .carousel {
+        flex-direction: column;
+        align-items: center;
     }
-}
 
-@media (max-width: 480px) {
     .project-card {
-        width: calc(100% - 2rem); /* One item per row on very small screens */
+        margin: 10px 0;
+        min-width: 90%;
     }
 }

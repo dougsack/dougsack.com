@@ -3,75 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
+    <title>Personal Landing Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <nav class="navbar">
-            <div class="menu-icon" onclick="toggleMenu()">
-                &#9776; <!-- Unicode character for the hamburger menu -->
-            </div>
-            <ul id="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="content appear" id="home">
-            <h1 class="fade-in gradient-text">Coming Soon</h1>
-            <p class="fade-in-delay">We are working hard to bring you a great experience. Stay tuned!</p>
-            <form id="notify-form">
+        <section class="coming-soon">
+            <h1>Coming Soon</h1>
+            <p>Sign up to get notified when we launch</p>
+            <form>
                 <input type="email" placeholder="Enter your email" required>
                 <button type="submit">Notify Me</button>
             </form>
-        </div>
-
-        <div class="content appear" id="about">
-            <h1 class="fade-in gradient-text">About Us</h1>
-            <p class="fade-in-delay">Coming soon...</p>
-        </div>
-        <div class="content appear" id="projects">
-    <h1 class="fade-in gradient-text">Projects</h1>
-    <div class="projects-container">
-        <div class="project-card fade-in-delay">
-            <img src="images/f1_elo_header.webp" alt="Project Image">
-            <h2>F1 Elo Tracker</h2>
-            <p>
-                Evaluate F1 Drivers against each other using real race results and the
-                <a href="https://en.wikipedia.org/wiki/Elo_rating_system" target="_blank">ELO rating system</a>.
-                A real-life iRating!
-            </p>
-            <a href="http://f1app.dougsack.com/" target="_blank">View Project</a>
-        </div>
-        <div class="project-card fade-in-delay">
-            <img src="images/data1.webp" alt="Project Image">
-            <h2>more to come</h2>
-            <p>
-                lorem ipsum
-            </p>
-            <a href="http://f1app.dougsack.com/" target="_blank">View Project</a>
-        </div>
-        <div class="project-card fade-in-delay">
-            <img src="images/data2.webp" alt="Project Image">
-            <h2>even more</h2>
-            <p>
-                lorem ipsum
-            </p>
-            <a href="http://f1app.dougsack.com/" target="_blank">View Project</a>
-        </div>
+        </section>
+        <section class="projects">
+            <h1>Projects</h1>
+            <div class="carousel">
+                <div class="project-card">
+                    <img src="images/f1_elo_header.webp" alt="F1 Driver Elo">
+                    <h2>F1 Driver Elo</h2>
+                    <p>Evaluate F1 Drivers against each other using real race results and the ELO rating system. A real-life iRating!</p>
+                </div>
+                <div class="project-card">
+                    <img src="images/data1.webp" alt="More to Come">
+                    <h2>More to Come</h2>
+                    <p>lorem ipsum</p>
+                </div>
+                <div class="project-card">
+                    <img src="images/data2.webp" alt="Even More">
+                    <h2>Even More</h2>
+                    <p>lorem ipsum</p>
+                </div>
+            </div>
+        </section>
     </div>
-</div>
-
-        <div class="content appear" id="contact">
-            <h1 class="fade-in gradient-text">Contact Us</h1>
-            <p class="fade-in-delay">How to get in touch...</p>
-        </div>
-    </div>
-    <footer>
-        <p>&copy; 2024 Coming Soon. All Rights Reserved. | <a href="https://example.com/privacy-policy" target="_blank">Privacy Policy</a></p>
-    </footer>
-    <script src="script.js"></script>
 </body>
 </html>
