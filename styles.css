@@ -114,6 +114,7 @@ button:hover {
     font-size: 0.9em;
 }
 
+
 @media (max-width: 600px) {
     .carousel {
         flex-direction: column;
@@ -124,4 +125,39 @@ button:hover {
         margin: 10px 0;
         min-width: 90%;
     }
+}
+
+/* General link style */
+a {
+    color: var(--princeton-orange);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Link hover and focus state */
+a:hover,
+a:focus {
+    color: #af630c;
+}
+
+/* Link active state */
+a:active {
+    color: #ff8f0f;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--princeton-orange);
+    color: var(--rich-black);
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project-button:hover {
+    background-color: #af630c;
 }
