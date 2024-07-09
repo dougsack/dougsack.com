@@ -1,163 +1,179 @@
 :root {
-    --prussian-blue: #0f384f;
-    --rich-black: #04151f;
-    --princeton-orange: #ff8f0f;
-    --antiflash-white: #EBEBEB;
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --blur-radius: 10px;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: top;
-    min-height: 100vh;
-    background: url('images/fabric.webp') no-repeat center center fixed;
+    box-sizing: border-box;
+    color: #333;
+    scroll-behavior: smooth;
+    background: url('images/background.webp') no-repeat center center/cover fixed;
     background-size: cover;
-    color: var(--antiflash-white);
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 10px;
+header {
+    background-color: rgba(0, 75, 107, 0.8); /* Make header slightly transparent */
+    padding: 10px 20px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    color: #fff;
+    padding: 150px 20px 50px;
     text-align: center;
-}
-
-section {
-    margin: 20px 0;
-    padding: 10px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.20);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
-}
-
-h1 {
-    margin: 15px;
-    font-size: 2em;
-}
-
-form {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    margin-top: 10px;
 }
 
-input[type="email"] {
-    padding: 10px;
-    border: none;
-    border-radius: 20px;
-    margin-right: 10px;
-    outline: none;
-    flex: 1;
-    max-width: 300px;
-    margin-bottom: 10px;
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    background-color: var(--princeton-orange);
-    color: var(--rich-black);
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-button:hover {
-    background-color: #af630c;
-}
-
-.carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    flex-wrap: nowrap;
-}
-
-.project-card {
-    min-width: 300px;
-    margin: 0 20px;
-    padding: 20px;
-    scroll-snap-align: center;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.20);
+.hero-secondary {
+    height: 10vh;
+    background: linear-gradient(135deg, rgba(229, 102, 22, 0.1), rgba(252, 238, 230, 0)); /* Semi-transparent background */
+    backdrop-filter: blur(var(--blur-radius));
+    -webkit-backdrop-filter: blur(var(--blur-radius));
+    border-radius: var(--border-radius);
+    border: 0px solid rgba(255, 255, 255, 0.20);
     box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.3);
+    padding: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+}
+
+.hero-content button {
+    background-color: #FF6B35;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+section {
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features, .pricing, .about, .contact {
     text-align: center;
 }
 
-.project-card img {
-    width: 100%;
-    border-radius: 15px;
+.features h2, .pricing h2, .about h2, .contact h2 {
+    font-size: 2em;
     margin-bottom: 10px;
 }
 
-.project-card h2 {
-    margin: 0 0 10px;
-    font-size: 1.3em;
+.feature-grid, .pricing-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
 }
 
-.project-card p {
-    margin: 0;
-    font-size: 0.9em;
-}
-
-
-@media (max-width: 600px) {
-    .carousel {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project-card {
-        margin: 10px 0;
-        min-width: 90%;
-    }
-}
-
-/* General link style */
-a {
-    color: var(--princeton-orange);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-/* Link hover and focus state */
-a:hover,
-a:focus {
-    color: #af630c;
-}
-
-/* Link active state */
-a:active {
-    color: #ff8f0f;
-}
-
-.project-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border: none;
+.feature-item, .pricing-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    max-width:300px;
+    flex: 1 1 calc(25% - 10px); /* Three items per row with 20px gap */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1)); /* Semi-transparent background */
+    backdrop-filter: blur(var(--blur-radius));
+    -webkit-backdrop-filter: blur(var(--blur-radius));
     border-radius: 20px;
-    background-color: var(--princeton-orange);
-    color: var(--rich-black);
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.project-button:hover {
-    background-color: #af630c;
+.feature-item img, .pricing-item img {
+    max-width: 100%;
+}
+
+.feature-item h3, .pricing-item h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.pricing-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-item ul li {
+    margin: 10px 0;
+}
+
+.pricing-item button {
+    background-color: #004B6B;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: auto; /* Push the button to the bottom */
+}
+
+footer {
+    background-color: rgba(0, 75, 107, 0.8); /* Make footer slightly transparent */
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glassmorphism for sections */
+.features, .pricing, .about, .contact {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.05)); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Replace var(--blur-radius) with a fixed value */
+    -webkit-backdrop-filter: blur(10px); /* Replace var(--blur-radius) with a fixed value */
+    border-radius: 15px; /* Replace var(--border-radius) with a fixed value */
+    border: 0px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.5);
+    padding: 100px;
+    margin: 20px;
 }
