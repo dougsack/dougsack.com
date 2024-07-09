@@ -3,36 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Landing Page</title>
+    <title>DougSack.com</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <section class="coming-soon">
-            <h1>Coming Soon</h1>
-            <p>Sign up to get notified when we launch</p>
-            <form>
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Notify Me</button>
-            </form>
+        <header class="header-section" style="background-color: var(--prussian-blue);">
+            <h1>DougSack.com</h1>
+        </header>
+        <section class="parallax" style="background-image: url('images/background1.jpg');">
+            <div class="section-content coming-soon">
+                <h2>Coming Soon</h2>
+                <p>Sign up to get notified when we launch</p>
+                <form>
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Notify Me (nothing happens)</button>
+                </form>
+            </div>
         </section>
-        <section class="projects">
+        <header class="header-section" style="background-color: var(--princeton-orange);">
             <h1>Projects</h1>
-            <div class="carousel">
-                <div class="project-card">
-                    <img src="images/f1_elo_header.webp" alt="F1 Driver Elo">
-                    <h2>F1 Driver Elo</h2>
-                    <p>Evaluate F1 Drivers against each other using real race results and the ELO rating system. A real-life iRating!</p>
-                </div>
-                <div class="project-card">
-                    <img src="images/data1.webp" alt="More to Come">
-                    <h2>More to Come</h2>
-                    <p>lorem ipsum</p>
-                </div>
-                <div class="project-card">
-                    <img src="images/data2.webp" alt="Even More">
-                    <h2>Even More</h2>
-                    <p>lorem ipsum</p>
+        </header>
+        <section class="parallax" style="background-image: url('images/background2.jpg');">
+            <div class="section-content projects">
+                <div class="carousel">
+                    <div class="project-card">
+                        <img src="images/f1_elo_header.webp" alt="F1 Driver Elo">
+                        <h3>F1 Driver Elo</h3>
+                        <p>Evaluate F1 Drivers against each other using real race results and the <a href="https://en.wikipedia.org/wiki/Elo_rating_system">ELO rating system</a>. A real-life iRating!</p>
+                        <a href="http://f1app.dougsack.com/" class="view-project-btn">View Project</a>
+
+                    </div>
+                    <div class="project-card">
+                        <img src="images/data1.webp" alt="More to Come">
+                        <h3>More to Come</h3>
+                        <p>lorem ipsum</p>
+                        <a href="http://f1app.dougsack.com/" class="view-project-btn">View Project</a>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/data2.webp" alt="Even More">
+                        <h3>Even More</h3>
+                        <p>lorem ipsum</p>
+                        <a href="http://f1app.dougsack.com/" class="view-project-btn">View Project</a>
+                    </div>
                 </div>
             </div>
         </section>
