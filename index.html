@@ -3,34 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Dynamic Website</title>
+    <title>dougsack.com</title>
     <link rel="stylesheet" href="styles.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">My Logo</div>
+            <div class="logo">
+                <img src="images/logo.png" alt="DS Logo">
+            </div>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#features">Projects</a></li>
+                <li><a href="#pricing">Services</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
+
             </ul>
         </nav>
     </header>
 
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Welcome to My Website</h1>
-            <p>Discover amazing features and services.</p>
-            <button>Get Started</button>
+            <h1>Doug Sack</h1>
+            <p>Collaborative Full Stack development for Entertainment and Creative Industries. Pioneering Research, Analytics and Data Architecture in the Industry for 15 years. </p.
         </div>
     </section>
 
     <section class="hero hero-secondary">
         <div class="hero-content">
-            <h1>Features</h1>
+            <h1>Projects & Apps</h1>
         </div>
     </section>
 
@@ -38,57 +44,60 @@
         <div class="feature-grid">
             <div class="feature-item glass">
                 <img src="images/f1_elo_header.webp" alt="Feature 1">
-                <h3>Feature 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h3>F1 Elo Tracker</h3>
+                <p>Evaluate F1 Drivers against each other using real race results and the <a href="https://en.wikipedia.org/wiki/Elo_rating_system">  ELO rating system </a> - A real-life iRating. </p>
+                <a href="https://f1app.dougsack.com/"> <button>View Project</button> </a>
             </div>
             <div class="feature-item glass">
                 <img src="images/data1.webp" alt="Feature 2">
-                <h3>Feature 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h3>YouTube Zero-Shot Sentiment</h3>
+                <p>Analyze what people ar talking about for any YouTube video. Uses AI to classify comments into categories with no prior training needed <a href="https://huggingface.co/tasks/zero-shot-classification"> (Zero-Shot)</a>. Sign in Required for use. </p>
+                <button>View Project</button>
             </div>
             <div class="feature-item glass">
                 <img src="images/data2.webp" alt="Feature 3">
-                <h3>Feature 3</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <h3>What is the movie where...?</h3>
+                <p>Leveraging <a href="https://www.ibm.com/topics/large-language-models"> LLMs</a> and text string <a href="https://aws.amazon.com/what-is/embeddings-in-machine-learning/"> embedding vectors</a>, users can type in any string of text and the algorithm will attempt to find a movie that most closely matches that description</p>
+                <button>View Project</button>
             </div>
         </div>
     </section>
 
     <section class="hero hero-secondary">
         <div class="hero-content">
-            <h1>Pricing</h1>
+            <h1>Consulting Opportunities</h1>
         </div>
     </section>
 
     <section id="pricing" class="pricing">
         <div class="pricing-grid">
             <div class="pricing-item">
-                <h3>Basic</h3>
-                <p>$10/month</p>
+                <h3>Data Analytics</h3>
+                <p>$100/hour</p>
                 <ul>
-                    <li>Feature 1</li>
-                    <li>Feature 2</li>
-                    <li>Feature 3</li>
+                    <li>Analysis</li>
+                    <li>Consulting</li>
+                    <li>Reporting</li>
                 </ul>
                 <button>Choose Plan</button>
             </div>
             <div class="pricing-item">
-                <h3>Pro</h3>
-                <p>$30/month</p>
+                <h3>Advanced Machine Learning & Data Science</h3>
+                <p>$250/hour</p>
                 <ul>
-                    <li>Feature 1</li>
-                    <li>Feature 2</li>
-                    <li>Feature 3</li>
+                    <li>all features from basic - PLUS</li>
+                    <li>Dashboarding</li>
+                    <li>Workflow Automation</li>
                 </ul>
                 <button>Choose Plan</button>
             </div>
             <div class="pricing-item">
-                <h3>Enterprise</h3>
-                <p>$100/month</p>
+                <h3>Full Stack Development</h3>
+                <p>$350/month</p>
                 <ul>
-                    <li>Feature 1</li>
-                    <li>Feature 2</li>
-                    <li>Feature 3</li>
+                    <li>all features from Pro - PLUS</li>
+                    <li>API Integrations</li>
+                    <li>Workflow Automation</li>
                 </ul>
                 <button>Choose Plan</button>
             </div>
@@ -106,7 +115,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 My Website. All rights reserved.</p>
+        <p>&copy; 2024 Doug Sack. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>

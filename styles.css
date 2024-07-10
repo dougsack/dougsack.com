@@ -1,11 +1,29 @@
 :root {
-  --primary-color: #3498db;
-  --secondary-color: #2ecc71;
-  --blur-radius: 10px;
+  --primary-color: #000459;
+  --secondary-color: #ffa600;
+  --blur-radius: 0px;
+}
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 300 to 700
+
+.comfortaa-<uniquifier> {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
 }
 
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 800
+
+.syne-<uniquifier> {
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Syne', 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,10 +31,31 @@ body {
     scroll-behavior: smooth;
     background: url('images/background.webp') no-repeat center center/cover fixed;
     background-size: cover;
+
 }
 
+.logo img {
+    width: 50px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Initial link color */
+a {
+    color: var(--secondary-color);
+    text-decoration: none; /* Optional: Remove underline */
+}
+
+/* Link color when clicked (active state) */
+a:active {
+    color: var(--primary-color);
+}
+
+/* Optional: Styling for hover state if needed */
+a:hover {
+    color: darken(var(--secondary-color), 0.9); /* Change this color if desired */
+}
 header {
-    background-color: rgba(0, 75, 107, 0.8); /* Make header slightly transparent */
+    background-color: var(--primary-color); /* Make header slightly transparent */
     padding: 10px 20px;
     color: #fff;
     display: flex;
@@ -56,14 +95,14 @@ nav ul li a {
 
 .hero-secondary {
     height: 10vh;
-    background: linear-gradient(135deg, rgba(229, 102, 22, 0.1), rgba(252, 238, 230, 0)); /* Semi-transparent background */
+    background: var(--secondary-color); /* Semi-transparent background */
     backdrop-filter: blur(var(--blur-radius));
     -webkit-backdrop-filter: blur(var(--blur-radius));
     border-radius: var(--border-radius);
     border: 0px solid rgba(255, 255, 255, 0.20);
     box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.3);
     padding: 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.0); /* Optional: Add a subtle shadow */
 }
 
 .hero-content h1 {
@@ -72,17 +111,19 @@ nav ul li a {
 }
 
 .hero-content p {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .hero-content button {
-    background-color: #FF6B35;
+    background-color: var(--secondary-color);
     color: #fff;
     border: none;
+    border-radius: 10px;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 1em;
     margin-top: 20px;
+    font-family:"Syne";
 }
 
 section {
@@ -99,6 +140,7 @@ section {
 .features h2, .pricing h2, .about h2, .contact h2 {
     font-size: 2em;
     margin-bottom: 10px;
+    color: var(--secondary-color)
 }
 
 .feature-grid, .pricing-grid {
@@ -146,21 +188,23 @@ section {
     margin: 10px 0;
 }
 
-.pricing-item button {
-    background-color: #004B6B;
+.pricing-item button , .feature-item button {
+    background-color: var(--primary-color);
     color: #fff;
     border: none;
+    border-radius:10px;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 1em;
     margin-top: auto; /* Push the button to the bottom */
+    font-family:"Syne";
 }
 
 footer {
-    background-color: rgba(0, 75, 107, 0.8); /* Make footer slightly transparent */
+    background-color: var(--primary-color); /* Make footer slightly transparent */
     color: #fff;
     text-align: center;
-    padding: 10px 20px;
+    padding: 5px 2px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,7 +212,7 @@ footer {
 
 /* Glassmorphism for sections */
 .features, .pricing, .about, .contact {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.05)); /* Semi-transparent background */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4)); /* Semi-transparent background */
     backdrop-filter: blur(10px); /* Replace var(--blur-radius) with a fixed value */
     -webkit-backdrop-filter: blur(10px); /* Replace var(--blur-radius) with a fixed value */
     border-radius: 15px; /* Replace var(--border-radius) with a fixed value */
