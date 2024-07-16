@@ -1,11 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Get the modal
+    // Spinner functionality
+    const spinner = document.getElementById('spinner');
+    const content = document.getElementById('content');
+
+    // Show spinner when DOM is fully loaded
+    spinner.style.display = 'flex';
+    content.style.display = 'none';
+
+    // Hide spinner when the entire page is fully loaded
+    window.addEventListener('load', function() {
+        spinner.style.display = 'none';
+        content.style.display = 'block';
+    });
+
+    // Modal functionality
     const modal = document.getElementById("modal");
-
-    // Get the button that opens the modal
     const btn = document.querySelector(".hero-content button");
-
-    // Get the <span> element that closes the modal
     const span = document.querySelector(".close");
 
     // When the user clicks the button, open the modal
