@@ -2,25 +2,113 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dougsack.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
     <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/3826_RC01/embed_loader.js"></script>
+    <style>
+        body {
+            font-family: 'Syne', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            scroll-behavior: smooth;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .trend-widget {
+            margin-bottom: 40px;
+        }
+
+        .image-text-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-text-container img {
+            max-width: 150px;
+            margin-right: 20px;
+            border-radius: 8px;
+        }
+
+        .image-text-container p {
+            margin: 0;
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .image-text-container:hover {
+            transform: scale(1.02);
+        }
+
+        @media (max-width: 768px) {
+            .image-text-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .image-text-container img {
+                margin-bottom: 15px;
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <script type="text/javascript">
-          trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/01cj6y","geo":"US","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&q=%2Fm%2F01cj6y&hl=en","guestPath":"https://trends.google.com:443/trends/embed/"});
-        </script>
-    </div>
+    <div class="container">
+        <div class="trend-widget">
+            <script type="text/javascript">
+                trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/01cj6y","geo":"US","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&q=%2Fm%2F01cj6y&hl=en","guestPath":"https://trends.google.com:443/trends/embed/"});
+            </script>
+        </div>
 
-    <div>
-        <script type="text/javascript">
-          trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/01cj6y","geo":"","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&q=%2Fm%2F01cj6y&hl=en","guestPath":"https://trends.google.com:443/trends/embed/"});
-        </script>
-    </div>
+        <div class="trend-widget">
+            <script type="text/javascript">
+                trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/01cj6y","geo":"","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&q=%2Fm%2F01cj6y&hl=en","guestPath":"https://trends.google.com:443/trends/embed/"});
+            </script>
+        </div>
 
-    <div>
-      <script type="text/javascript">
-trends.embed.renderExploreWidget("GEO_MAP", {"comparisonItem":[{"keyword":"/m/01cj6y","geo":"","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&q=%2Fm%2F01cj6y&hl=en","guestPath":"https://trends.google.com:443/trends/embed/"});     </script>
+        <div class="trend-widget">
+            <script type="text/javascript">
+                trends.embed.renderExploreWidget("GEO_MAP", {"comparisonItem":[{"keyword":"/m/01cj6y","geo":"","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&q=%2Fm%2F01cj6y&hl=en","guestPath":"https://trends.google.com:443/trends/embed/"});
+            </script>
+        </div>
+
+        <!-- Image and Text Sections -->
+        <div class="image-text-container">
+            <img src="images/FBtargeting.png" alt="Image 1">
+            <p>There is no targetable interest for Adrien Brody available.</p>
+        </div>
+
+        <div class="image-text-container">
+            <img src="images/global_YT_Impressions.png" alt="Image 2">
+            <p>Only 30M targetable impressions globally. Film genres have 10B or more.</p>
+        </div>
+
+        <div class="image-text-container">
+            <img src="images/US_YT_Impressions.png" alt="Image 3">
+            <p>21M of the 30M above are from the US alone.</p>
+        </div>
+
+        <div class="image-text-container">
+            <img src="images/weekly_display_Including_show.png" alt="Image 4">
+            <p>Including Sucession (top co-search term), less than 5M weekly impressions available globally.</p>
+        </div>
     </div>
 </body>
 </html>
