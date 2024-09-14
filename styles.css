@@ -1,251 +1,254 @@
 :root {
   --primary-color: #000459;
   --secondary-color: #ffa600;
-  --blur-radius: 0px;
-}
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 300 to 700
-
-.comfortaa-<uniquifier> {
-  font-family: "Comfortaa", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
+  --blur-radius: 10px;
+  --border-radius: 15px;
+  --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 400 to 800
-
-.syne-<uniquifier> {
-  font-family: "Syne", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
 body {
-    font-family: 'Syne', 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #333;
-    scroll-behavior: smooth;
-    background: url('images/background.webp') no-repeat center center/cover fixed;
-    background-size: cover;
-    background-attachment: fixed;
-
+  font-family: 'Syne', 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+  scroll-behavior: smooth;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .logo img {
-    width: 50px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
+  width: 50px;
+  height: auto;
 }
 
-/* Initial link color */
 a {
-    color: var(--secondary-color);
-    text-decoration: none; /* Optional: Remove underline */
+  color: var(--secondary-color);
+  text-decoration: none;
 }
 
-/* Link color when clicked (active state) */
 a:active {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
-/* Optional: Styling for hover state if needed */
 a:hover {
-    color: darken(var(--secondary-color), 0.9); /* Change this color if desired */
+  color: darken(var(--secondary-color), 0.9);
 }
+
 header {
-    background-color: var(--primary-color); /* Make header slightly transparent */
-    padding: 10px 20px;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+  background-color: var(--primary-color);
+  padding: 10px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+}
+nav ul li a:hover {
+  color: var(--secondary-color);
+}
+.hero {
+  color: #fff;
+  padding: 100px 20px 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-.hero {
-    color: #fff;
-    padding: 150px 20px 50px;
-    text-align: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hero-content {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-secondary {
-    height: 10vh;
-    background: var(--secondary-color); /* Semi-transparent background */
-    backdrop-filter: blur(var(--blur-radius));
-    -webkit-backdrop-filter: blur(var(--blur-radius));
-    border-radius: var(--border-radius);
-    border: 0px solid rgba(255, 255, 255, 0.20);
-    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.3);
-    padding: 50px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.0); /* Optional: Add a subtle shadow */
+  height: 5vh;
+  background: var(--secondary-color);
+  backdrop-filter: blur(var(--blur-radius));
+  -webkit-backdrop-filter: blur(var(--blur-radius));
+  border-radius: var(--border-radius);
+  border: 0px solid rgba(255, 255, 255, 0.20);
+  box-shadow: 0 4px 6px var(--shadow-color);
+  padding: 30px;
+}
+
+.hero-content h1, .hero-secondary h1 {
+  margin: 0;
 }
 
 .hero-content h1 {
-    font-size: 2.5em;
-    margin: 0;
+  font-size: 3.3em;
 }
 
-.hero-content p {
-    font-size: 1.1em;
+.hero-secondary h1 {
+  font-size: 1.75em;
+}
+
+.hero-content h2 {
+  color: var(--primary-color);
+  font-size: 2em;
+  padding: 10px;
 }
 
 .hero-content button {
-    background-color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: auto;
+  font-family: "Syne";
+}
+
+section {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.features, .pricing, .about, .contact {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4));
+  backdrop-filter: blur(var(--blur-radius));
+  -webkit-backdrop-filter: blur(var(--blur-radius));
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 10px 0 var(--shadow-color);
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+
+
+}
+
+.feature-grid, .pricing-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.feature-item, .pricing-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  padding: 10px;
+  flex: 1 1 calc(33% - 10px);
+  max-width: 300px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1));
+  backdrop-filter: blur(var(--blur-radius));
+  -webkit-backdrop-filter: blur(var(--blur-radius));
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 10px 0 var(--shadow-color);
+  margin: 5px;
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* Home page background */
+body.home {
+    background: url('images/background.webp') no-repeat center center/cover fixed;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* About page background */
+body.cv {
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body.cv bioline {
+font-size: 0.2em;
+}
+
+.feature-item img, .pricing-item img {
+    max-width: 100%; /* Reduce the image width to 80% of the container */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 5px auto; /* Center the image */
+}
+.pricing-item button, .feature-item button {
+    background-color: var(--primary-color);
     color: #fff;
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
     cursor: pointer;
     font-size: 1em;
-    margin-top: 20px;
-    font-family:"Syne";
-}
-
-section {
-    padding: 20px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.features, .pricing, .about, .contact {
-    text-align: center;
-}
-
-.features h2, .pricing h2, .about h2, .contact h2 {
-    font-size: 2em;
-    margin-bottom: 5px;
-    color: var(--secondary-color)
-}
-
-.feature-grid, .pricing-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    justify-content: center;
-    width: 100%;
-}
-
-.feature-item, .pricing-item {
-    border: 1px solid #ddd;
-    padding: 5px;
-    max-width:300px;
-    flex: 1 1 calc(33% - 10px); /* Three items per row with 20px gap */
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1)); /* Semi-transparent background */
-    backdrop-filter: blur(var(--blur-radius));
-    -webkit-backdrop-filter: blur(var(--blur-radius));
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.20);
-    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.3);
-    padding: 10px;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.feature-item img, .pricing-item img {
-    max-width: 100%;
-}
-
-.feature-item h3, .pricing-item h3 {
-    font-size: 1.5em;
-    margin-top: 10px;
-}
-
-.pricing-item ul {
-    list-style: none;
-    padding: 0;
-}
-
-.pricing-item ul li {
-    margin: 10px 0;
-}
-
-.pricing-item button , .feature-item button {
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius:10px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1em;
+    font-family: "Syne";
     margin-top: auto; /* Push the button to the bottom */
-    font-family:"Syne";
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
 
-footer {
-    background-color: var(--primary-color); /* Make footer slightly transparent */
-    color: #fff;
-    text-align: center;
-    padding: 5px 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.pricing-item button:hover, .feature-item button:hover {
+    background-color: var(--secondary-color); /* Change to secondary color on hover */
 }
 
-/* Glassmorphism for sections */
-.features, .pricing, .about, .contact {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.4)); /* Semi-transparent background */
-    backdrop-filter: blur(10px); /* Replace var(--blur-radius) with a fixed value */
-    -webkit-backdrop-filter: blur(10px); /* Replace var(--blur-radius) with a fixed value */
-    border-radius: 15px; /* Replace var(--border-radius) with a fixed value */
-    border: 0px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    margin: 20px;
-}
-.spinner-container {
-    display: none; /* Initially hidden */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.about h2, .contact h2 {
+    color: var(--secondary-color);
+.features, .pricing, .about, .contact
+
 }
 
-.spinner {
-    border: 16px solid #f3f3f3;
-    border-top: 16px solid #3498db;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
