@@ -25,10 +25,12 @@
 </head>
 
 <body class="cv">
-    <header style="position: sticky;">
+    <header style="position: sticky; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;">
         <h1>Doug Sack</h1>
-        <p style="font-size: 0.8em; margin: 20px;">Dedicated and results-driven Data & Entertainment professional with more than 10 years of experience in leveraging data-driven insights in the entertainment industry. Proven expertise in machine learning, statistical analysis, and data visualization. Skilled in leading and mentoring cross-functional teams to deliver high-impact analytics projects.</p>
-        <p style="font-size: 1.0em; margin: 20px;">Los Angeles, CA<br>(603) 233-8460<br>dougsack@gmail.com</p>
+        <div style="display: flex; flex-direction: row; gap: 20px;">
+            <p style="font-size: 1.0em;">Los Angeles, CA<br>(603) 233-8460<br>dougsack@gmail.com</p>
+            <p style="font-size: 0.8em;">Dedicated and results-driven Data & Entertainment professional with more than 10 years of experience in leveraging data-driven insights in the entertainment industry. Proven expertise in machine learning, statistical analysis, and data visualization. Skilled in leading and mentoring cross-functional teams to deliver high-impact analytics projects.</p>
+        </div>
     </header>
 
     <section>
@@ -121,6 +123,21 @@
     <footer>
         <p>&copy; 2024 Doug Sack. All Rights Reserved.</p>
     </footer>
+
+ <style>
+        /* Mobile: stack elements vertically */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header div {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
 </body>
 
 </html>
