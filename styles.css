@@ -252,4 +252,52 @@ font-size: 0.2em;
 
 }
 
+/* Flex Grid Container for Images */
+#imageGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 20px;
+}
+
+.image-item {
+    flex: 1 1 calc(20% - 10px); /* Each image takes up to 20% of the row, minus spacing */
+    max-width: 300px;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px var(--shadow-color);
+    overflow: hidden;
+    margin: 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 1));
+    backdrop-filter: blur(var(--blur-radius));
+    -webkit-backdrop-filter: blur(var(--blur-radius));
+    border: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1200px) {
+    .image-item {
+        flex: 1 1 calc(25% - 10px); /* Adjust to 25% for smaller screens */
+    }
+}
+
+@media (max-width: 800px) {
+    .image-item {
+        flex: 1 1 calc(33.33% - 10px); /* Adjust to 33.33% for medium screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .image-item {
+        flex: 1 1 calc(50% - 10px); /* Adjust to 50% for small screens */
+    }
+}
 
