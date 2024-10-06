@@ -16,120 +16,108 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Comfortaa:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
 </head>
-<body class="home">
-    <div id="spinner" class="spinner-container">
-        <div class="spinner"></div>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="DS Logo">
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Projects</a></li>
+                <li><a href="#pricing">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="name">
+        <h1>Doug Sack</h1>
+        <p>Collaborative Full Stack development for Entertainment and Creative Industries. Pioneering Research, Analytics and Data Architecture in the Industry for 15 years.</p>
+    </section>
+
+    <section class="hero">
+        <h1>Projects & Apps</h1>
+    </section>
+
+    <div class="feature-grid">
+        <div class="feature-item">
+            <img src="images/f1_elo_header.webp" alt="Feature 1">
+            <h3>F1 Elo Tracker</h3>
+            <p>Evaluate F1 Drivers against each other using real race results and the <a href="https://en.wikipedia.org/wiki/Elo_rating_system">ELO rating system</a> - A real-life iRating.</p>
+            <a href="https://apps.dougsack.com/"><button>View Project</button></a>
+        </div>
+        <div class="feature-item">
+            <img src="images/data2.webp" alt="Feature 3">
+            <h3>What is the movie where...?</h3>
+            <p>Leveraging <a href="https://www.ibm.com/topics/large-language-models">LLMs</a> and text string <a href="https://aws.amazon.com/what-is/embeddings-in-machine-learning/">embedding vectors</a>, users can type in any string of text and the algorithm will attempt to find a movie that most closely matches that description</p>
+            <a href="https://descriptioncomper.streamlit.app/"><button>View Project</button></a>
+        </div>
+        <div class="feature-item">
+            <img src="images/average_colors_trailer_barcode_Barbie ｜ Main Trailer.mp4.png" alt="Feature 2">
+            <h3>Trailer Barcodes</h3>
+            <p>What is the color story of a movie trailer? Are there similarities between distributors? Can color be used to determine similarity? Randomly generate a barcode for a movie trailer and explore the patterns in movie marketing.</p>
+            <a href="https://apps.dougsack.com/barcodes.html"><button>View Project</button></a>
+        </div>
     </div>
-    <div id="content" style="display: none;">
-        <header>
-            <nav>
-                <div class="logo">
-                    <img src="images/logo.png" alt="DS Logo">
-                </div>
+
+    <section class="hero">
+        <h1>Consulting Opportunities</h1>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <div class="pricing-grid">
+            <div class="pricing-item">
+                <h3>Data Analytics</h3>
+                <p>$100/hour</p>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#features">Projects</a></li>
-                    <li><a href="#pricing">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li>Analysis</li>
+                    <li>Consulting</li>
+                    <li>Reporting</li>
                 </ul>
-            </nav>
-        </header>
-
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Doug Sack</h1>
-                <p>Collaborative Full Stack development for Entertainment and Creative Industries. Pioneering Research, Analytics and Data Architecture in the Industry for 15 years. </p>
+                <button>Choose Plan</button>
             </div>
-        </section>
-
-        <section class="hero hero-secondary">
-            <h1>Projects & Apps</h1>
-        </section>
-
-        <section id="features" class="features">
-        <section id="features" class="features">
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <img src="images/f1_elo_header.webp" alt="Feature 1">
-                    <h3>F1 Elo Tracker</h3>
-                    <p>Evaluate F1 Drivers against each other using real race results and the <a href="https://en.wikipedia.org/wiki/Elo_rating_system">ELO rating system</a> - A real-life iRating. </p>
-                    <a href="https://apps.dougsack.com/"><button>View Project</button></a>
-                </div>
-                <div class="feature-item">
-                    <img src="images/data2.webp" alt="Feature 3">
-                    <h3>What is the movie where...?</h3>
-                    <p>Leveraging <a href="https://www.ibm.com/topics/large-language-models">LLMs</a> and text string <a href="https://aws.amazon.com/what-is/embeddings-in-machine-learning/">embedding vectors</a>, users can type in any string of text and the algorithm will attempt to find a movie that most closely matches that description</p>
-                    <a href="https://descriptioncomper.streamlit.app/"><button>View Project</button></a>
-                </div>
-                <div class="feature-item">
-                    <img src="images/average_colors_trailer_barcode_Barbie ｜ Main Trailer.mp4.png" alt="Feature 2">
-                    <h3>Trailer Barcodes</h3>
-                    <p>What is the color story of a movie trailer? Are there similarities between distributors? Can color be used to determine similarity? Randomly generate a barcode for a movie trailer and explore the patterns in movie marketing.</p>
-                    <a href="https://apps.dougsack.com/barcodes.html"><button>View Project</button></a>
-                </div>
+            <div class="pricing-item">
+                <h3>Advanced Machine Learning & Data Science</h3>
+                <p>$250/hour</p>
+                <ul>
+                    <li>all features from basic - PLUS</li>
+                    <li>Dashboarding</li>
+                    <li>Workflow Automation</li>
+                </ul>
+                <button>Choose Plan</button>
             </div>
-        </section>
-
-        <section class="hero hero-secondary">
-            <h1>Consulting Opportunities</h1>
-        </section>
-
-        <section id="pricing" class="pricing">
-            <div class="pricing-grid">
-                <div class="pricing-item">
-                    <h3>Data Analytics</h3>
-                    <p>$100/hour</p>
-                    <ul>
-                        <li>Analysis</li>
-                        <li>Consulting</li>
-                        <li>Reporting</li>
-                    </ul>
-                    <button>Choose Plan</button>
-                </div>
-                <div class="pricing-item">
-                    <h3>Advanced Machine Learning & Data Science</h3>
-                    <p>$250/hour</p>
-                    <ul>
-                        <li>all features from basic - PLUS</li>
-                        <li>Dashboarding</li>
-                        <li>Workflow Automation</li>
-                    </ul>
-                    <button>Choose Plan</button>
-                </div>
-                <div class="pricing-item">
-                    <h3>Full Stack Development</h3>
-                    <p>$350/hour</p>
-                    <ul>
-                        <li>all features from Pro - PLUS</li>
-                        <li>API Integrations</li>
-                        <li>Workflow Automation</li>
-                    </ul>
-                    <button>Choose Plan</button>
-                </div>
+            <div class="pricing-item">
+                <h3>Full Stack Development</h3>
+                <p>$350/hour</p>
+                <ul>
+                    <li>all features from Pro - PLUS</li>
+                    <li>API Integrations</li>
+                    <li>Workflow Automation</li>
+                </ul>
+                <button>Choose Plan</button>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="about" class="about">
-            <h2>About Me</h2>
-            <p>Dedicated and results-driven Data & Entertainment  professional with more than 10 years of experience in leveraging data-driven insights in the entertainment industry. Proven expertise in machine learning, statistical analysis, and data visualization. Skilled in leading and mentoring cross-functional teams to deliver high-impact analytics projects.</p>
-            <a href="cv.html">Work Experience</a>
-        </section>
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Dedicated and results-driven Data & Entertainment professional with more than 10 years of experience in leveraging data-driven insights in the entertainment industry. Proven expertise in machine learning, statistical analysis, and data visualization. Skilled in leading and mentoring cross-functional teams to deliver high-impact analytics projects.</p>
+        <a href="cv.html">Work Experience</a>
+    </section>
 
-        <section id="contact" class="contact">
-            <h2>Contact Us</h2>
-            <p>If you have any questions, feel free to reach out to me.</p>
-            <a href="mailto:me@dougsack.com?subject=Hello from your Website">me@dougsack.com</a>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to me.</p>
+        <a href="mailto:me@dougsack.com?subject=Hello from your Website">me@dougsack.com</a>
+    </section>
 
-        </section>
-
-
-    </div>
-<footer>
+    <footer>
         <p>&copy; 2024 Doug Sack. All rights reserved.</p>
-</footer>
+    </footer>
 
     <script src="script.js"></script>
 </body>
